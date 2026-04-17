@@ -1365,7 +1365,7 @@
             <p class="hero-tagline">Building intelligent systems and clean interfaces — one commit at a time.</p>
             <div class="hero-btns">
                 <a href="#projects" class="btn btn-primary">View My Work &rarr;</a>
-                <a href="Pratyush_Resume_v3.pdf" target="_blank" class="btn btn-outline">Download Resume</a>
+                <button onclick="openResumeModal()" class="btn btn-outline" style="font-family: inherit;">Download Resume</button>
             </div>
         </div>
         <div class="scroll-indicator">
@@ -2400,6 +2400,36 @@
         mailModal.addEventListener('click', (e) => {
             if (e.target === mailModal) {
                 closeMailModal();
+            }
+        });
+
+        // Resume Modal Logic
+        const resumeModal = document.getElementById('resume-modal');
+        function openResumeModal() {
+            resumeModal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+            document.getElementById('resume-copy-toast').style.opacity = '0';
+        }
+
+        function closeResumeModal() {
+            resumeModal.classList.remove('active');
+            document.body.style.overflow = 'auto';
+        }
+
+        function copyResumeEmail(btn) {
+            const emailText = document.getElementById('resume-email-text').innerText;
+            navigator.clipboard.writeText(emailText).then(() => {
+                const toast = document.getElementById('resume-copy-toast');
+                toast.style.opacity = '1';
+                setTimeout(() => {
+                    toast.style.opacity = '0';
+                }, 2000);
+            });
+        }
+
+        resumeModal.addEventListener('click', (e) => {
+            if (e.target === resumeModal) {
+                closeResumeModal();
             }
         });
 
