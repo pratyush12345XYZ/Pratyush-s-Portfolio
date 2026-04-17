@@ -78,6 +78,11 @@
             will-change: transform;
         }
 
+        @media (hover: none) and (pointer: coarse) {
+            #custom-cursor { display: none !important; }
+            * { cursor: auto !important; }
+        }
+
         /* Loading Screen */
         #loader {
             position: fixed;
@@ -1238,7 +1243,7 @@
             <p class="hero-tagline">Building intelligent systems and clean interfaces — one commit at a time.</p>
             <div class="hero-btns">
                 <a href="#projects" class="btn btn-primary">View My Work &rarr;</a>
-                <a href="Pratyush_Resume_v3.pdf" target="_blank" class="btn btn-outline">Download Resume</a>
+                <button onclick="alert('Warning: You don\'t have access to this feature. Contact Pratyush to get this access.\n\nEmail: pratyush93.work@gmail.com')" class="btn btn-outline" style="font-family: inherit;">Download Resume</button>
             </div>
         </div>
         <div class="scroll-indicator">
@@ -2104,22 +2109,22 @@
         const certData = [
             {
                 id: 1, title: "Docker & Kubernetes", issuer: "Udemy", energy: 95, icon: "🐳",
-                pdf: "Certificates/dockers Certificate.pdf", status: "COMPLETE", date: "Jan 2026",
+                pdf: "Certificates/Docker_Certificate.jpg", status: "COMPLETE", date: "Jan 2026",
                 desc: "Covers containerization fundamentals using Docker and Kubernetes architecture."
             },
             {
                 id: 2, title: "Business for Good", issuer: "London Business School", energy: 88, icon: "🌱",
-                pdf: "Certificates/Business for Good Fundamentals of Corporate Responsibility.pdf", status: "COMPLETE", date: "Feb 2026",
+                pdf: "Certificates/Business_for_Good.pdf", status: "COMPLETE", date: "Feb 2026",
                 desc: "Explores how businesses can drive positive social and environmental impact. Covered the principles of ESG frameworks."
             },
             {
                 id: 3, title: "Ethical Decision", issuer: "CU Boulder", energy: 92, icon: "⚖️",
-                pdf: "Certificates/Ethical Decision Making for Success in the Tech Industry.pdf", status: "COMPLETE", date: "Mar 2026",
+                pdf: "Certificates/Ethical_Decision.pdf", status: "COMPLETE", date: "Mar 2026",
                 desc: "Examines the ethical dimensions of working in technology — from data privacy and algorithmic bias to professional responsibility."
             },
             {
                 id: 4, title: "Corporate Governance", issuer: "Coursera", energy: 85, icon: "🏢",
-                pdf: "Certificates/Corporate Governance.pdf", status: "COMPLETE", date: "Apr 2026",
+                pdf: "Certificates/Corporate_Governance.pdf", status: "COMPLETE", date: "Apr 2026",
                 desc: "Covers principles and structures governing how companies are directed and controlled including board responsibilities."
             }
         ];
