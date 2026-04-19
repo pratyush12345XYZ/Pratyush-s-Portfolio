@@ -1139,6 +1139,113 @@
         .social-btn.github:hover { box-shadow: 0 0 25px #ffffff; color: #ffffff; border-color: rgba(255, 255, 255, 0.5); }
         .social-btn.email:hover { box-shadow: 0 0 25px var(--accent); color: var(--accent); border-color: rgba(0, 212, 255, 0.5); }
 
+        /* 9. Contact Form (Transmission) */
+        .contact-form-container {
+            max-width: 800px;
+            margin: 4rem auto;
+            padding: 3rem;
+            background: rgba(13, 21, 38, 0.6);
+            border-radius: 30px;
+            border: 1px solid var(--glass-border);
+            box-shadow: var(--glass-shadow);
+        }
+
+        .contact-form {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .form-group.full-width {
+            grid-column: 1 / span 2;
+        }
+
+        .form-input {
+            width: 100%;
+            padding: 1rem 1.5rem;
+            background: rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 50px;
+            color: var(--text);
+            font-family: inherit;
+            font-size: 1rem;
+            transition: all 0.3s;
+        }
+
+        .form-input:focus {
+            outline: none;
+            border-color: var(--accent);
+            background: rgba(0, 0, 0, 0.5);
+            box-shadow: 0 0 15px rgba(0, 212, 255, 0.2);
+        }
+
+        .form-textarea {
+            border-radius: 20px;
+            resize: vertical;
+            min-height: 150px;
+        }
+
+        .form-submit-container {
+            grid-column: 1 / span 2;
+            display: flex;
+            justify-content: center;
+            margin-top: 1rem;
+        }
+
+        .btn-transmission {
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            padding: 1rem 2.50rem;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 50px;
+            color: var(--text);
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 600;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .btn-transmission:hover {
+            background: var(--accent);
+            color: #000;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0, 212, 255, 0.3);
+        }
+
+        .btn-transmission svg {
+            transition: transform 0.3s;
+        }
+
+        .btn-transmission:hover svg {
+            transform: translateX(5px) translateY(-5px);
+        }
+
+        @media (max-width: 768px) {
+            .contact-form {
+                grid-template-columns: 1fr;
+            }
+            .form-group.full-width {
+                grid-column: 1;
+            }
+            .form-submit-container {
+                grid-column: 1;
+            }
+            .contact-form-container {
+                padding: 2rem;
+                margin: 2rem 1rem;
+            }
+        }
+
         /* Section Dividers */
         .divider {
             width: 100%;
@@ -1634,6 +1741,37 @@
             <button onclick="closeResumeModal()" style="display: inline-block; margin-top: 1.5rem; padding: 0.8rem 2rem; background: var(--bg); border: 1px solid var(--accent); color: var(--text); font-weight: 600; border-radius: 20px; font-size: 0.9rem; cursor: pointer; transition: all 0.2s;" onmouseover="this.style.background='var(--accent)'; this.style.color='#000';" onmouseout="this.style.background='var(--bg)'; this.style.color='var(--text)';">Acknowledge</button>
         </div>
     </div>
+    <!-- 8.5 Contact Form -->
+    <section id="contact" style="padding: 2rem 5%;">
+        <div class="contact-form-container hidden">
+            <h2 class="section-title">Send a Transmission</h2>
+            <form action="https://api.web3forms.com/submit" method="POST" class="contact-form">
+                <input type="hidden" name="access_key" value="65e81ce1-7a98-45ae-bf75-2792b4120a1b">
+                <input type="hidden" name="from_name" value="Portfolio Contact Form">
+                
+                <div class="form-group">
+                    <input type="text" name="name" class="form-input" placeholder="Your Name *" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" name="email" class="form-input" placeholder="Your Email *" required>
+                </div>
+                <div class="form-group full-width">
+                    <input type="text" name="subject" class="form-input" placeholder="Transmission topic *" required>
+                </div>
+                <div class="form-group full-width">
+                    <textarea name="message" class="form-input form-textarea" placeholder="Enter data here..." required></textarea>
+                </div>
+                
+                <div class="form-submit-container">
+                    <button type="submit" class="btn-transmission">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+                        Execute Transmission
+                    </button>
+                </div>
+            </form>
+        </div>
+    </section>
+
     <!-- 9. Connect / Links -->
     <section id="connect">
         <div class="connect-section hidden">
