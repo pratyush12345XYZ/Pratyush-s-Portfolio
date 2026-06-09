@@ -1541,11 +1541,11 @@
 
                 <div class="stats-container">
                     <div class="stat-item">
-                        <div class="stat-num" data-target="5">0</div>
+                        <div class="stat-num" data-target="6">0</div>
                         <div class="stat-label">Projects Built</div>
                     </div>
                     <div class="stat-item">
-                        <div class="stat-num" data-target="4">0</div>
+                        <div class="stat-num" data-target="7">0</div>
                         <div class="stat-label">Certifications</div>
                     </div>
                     <div class="stat-item">
@@ -1818,6 +1818,23 @@
                 </div>
             </div>
 
+            <!-- SmartServe -->
+            <div class="glass project-card hidden tilt-card" onclick="openModal('smartserve')">
+                <h3 class="project-title">SmartServe</h3>
+                <div class="project-tech-tags">
+                    <span class="tech-tag">React 18</span>
+                    <span class="tech-tag">TypeScript</span>
+                    <span class="tech-tag">Node.js</span>
+                    <span class="tech-tag">Socket.IO</span>
+                    <span class="tech-tag">Prisma</span>
+                </div>
+                <p class="project-desc-short">A production-ready, QR-based restaurant ordering platform with real-time
+                    kitchen display, waiter dashboards, and full admin suite.</p>
+                <div class="project-actions">
+                    <span class="action-btn">💻 GitHub</span>
+                </div>
+            </div>
+
         </div>
     </section>
 
@@ -1895,6 +1912,39 @@
                 </div>
                 <button class="btn-view-cert"
                     onclick="openPdfModal('Certificates/sql course bootcamp.pdf')">Inspect</button>
+            </div>
+            <!-- Cert 5 -->
+            <div class="cert-card">
+                <div class="cert-icon">🌐</div>
+                <h3 class="cert-title">CCNA: Intro to Networks</h3>
+                <p class="cert-issuer">Cisco Networking Academy</p>
+                <div class="xp-bar-bg">
+                    <div class="xp-bar-fill" style="width: 90%;"></div><span class="xp-text">LVL 90</span>
+                </div>
+                <button class="btn-view-cert"
+                    onclick="openPdfModal('Certificates/ccna_IntrotoNetworks.pdf')">Inspect</button>
+            </div>
+            <!-- Cert 6 -->
+            <div class="cert-card">
+                <div class="cert-icon">🔀</div>
+                <h3 class="cert-title">CCNA: Switching & Routing</h3>
+                <p class="cert-issuer">Cisco Networking Academy</p>
+                <div class="xp-bar-bg">
+                    <div class="xp-bar-fill" style="width: 92%;"></div><span class="xp-text">LVL 92</span>
+                </div>
+                <button class="btn-view-cert"
+                    onclick="openPdfModal('Certificates/ccna_Switches.pdf')">Inspect</button>
+            </div>
+            <!-- Cert 7 -->
+            <div class="cert-card">
+                <div class="cert-icon">🔒</div>
+                <h3 class="cert-title">CCNA: Enterprise Networking</h3>
+                <p class="cert-issuer">Cisco Networking Academy</p>
+                <div class="xp-bar-bg">
+                    <div class="xp-bar-fill" style="width: 94%;"></div><span class="xp-text">LVL 94</span>
+                </div>
+                <button class="btn-view-cert"
+                    onclick="openPdfModal('Certificates/ccna_Enterprise.pdf')">Inspect</button>
             </div>
         </div>
     </section>
@@ -2371,6 +2421,15 @@
                 github: 'https://github.com/pratyush12345XYZ/NoZero',
                 folder: 'ScreenShots/NoZero/',
                 images: []
+            },
+            smartserve: {
+                title: 'SmartServe',
+                tags: ['React 18', 'TypeScript', 'Node.js', 'Express.js', 'Socket.IO', 'Prisma ORM', 'Tailwind CSS', 'Zustand', 'TanStack Query', 'Vite'],
+                desc: 'SmartServe is a production-ready, full-stack QR-based restaurant ordering and management platform engineered for the modern dining experience. Customers scan a table-specific QR code to instantly browse a dynamic digital menu — complete with category navigation, real-time search, and veg/non-veg filters — and place orders that flow directly to the kitchen, eliminating wait times and manual intervention.\n\nThe architecture is a TypeScript monorepo with a shared @smartserve/shared package containing Zod validation schemas, enums, and shared interfaces that enforce strict end-to-end type safety between the React frontend and the Node.js/Express backend — a pattern used at scale in top-tier engineering teams.\n\nKey highlights: A real-time Kitchen Display System (KDS) renders a Kanban-style board where orders instantly appear via WebSocket events and kitchen staff advance them through preparation stages. A Waiter Dashboard receives live pings when customers request assistance, water, or the bill. An Admin Suite enables full menu management — editing items, toggling "Sold Out" status, and temporarily closing the restaurant to new orders. Built mobile-first with Tailwind CSS, glassmorphism aesthetics, smooth micro-animations, and full dark-mode support.',
+                live: null,
+                github: 'https://github.com/pratyush12345XYZ/SmartServe',
+                folder: 'ScreenShots/SmartServe/',
+                images: ["Screenshot 2026-06-09 235748.png", "Screenshot 2026-06-10 000104.png", "Screenshot 2026-06-10 000125.png", "Screenshot 2026-06-10 000135.png", "Screenshot 2026-06-10 000144.png", "Screenshot 2026-06-10 000206.png", "Screenshot 2026-06-10 000308.png", "Screenshot 2026-06-10 000321.png", "Screenshot 2026-06-10 000328.png", "Screenshot 2026-06-10 000343.png", "Screenshot 2026-06-10 000351.png", "Screenshot 2026-06-10 000359.png", "Screenshot 2026-06-10 000413.png", "Screenshot 2026-06-10 000420.png", "Screenshot 2026-06-10 000427.png"]
             }
         };
 
